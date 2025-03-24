@@ -19,10 +19,12 @@ app.use(express.json());
 app.use(morgan("dev"));
 //tao tuyen duong
 // url http://localhost:8080
-
+//user
 app.use("/api/v1/test", require("./routes/testRoutes"));
 app.use("/api/v1/auth", require("./routes/authRoutes"));
-app.use("/api/v1/user", require("./routes/userRoutes"))
+app.use("/api/v1/user", require("./routes/userRoutes"));
+//restaurent
+app.use("/api/v1/restaurant", require("./routes/restaurantRoutes"));
 
 app.get("/", (req, res) => {
     return res
