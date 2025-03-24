@@ -29,6 +29,9 @@ app.use("/api/v1/restaurant", require("./routes/restaurantRoutes"));
 app.use("/api/v1/category", require("./routes/categoryRoutes"));
 //food
 app.use("/api/v1/food", require("./routes/foodRoutes"));
+//order
+app.use("/api/v1/order", require("./routes/orderRoutes"));
+
 
 app.get("/", (req, res) => {
     return res
